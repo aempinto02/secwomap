@@ -68,7 +68,7 @@ curl --location --request GET 'http://localhost:8080/incident/severity/3'
 
 ## Documentação visual da aplicação (Swagger UI)
 
-Caso a aplicação *SecWomap* seja rodada localmente, na própria máquina, a URL abaixo oferece a documentação visual da aplicação feita pelo *Swagger UI*:
+Caso a aplicação *SecWomap* seja rodada localmente, na própria máquina, a URL abaixo oferece a documentação visual da aplicação feita pelo *Swagger UI*, podendo ser visualizada em qualquer navegador:
 
 ```swagger
 http://localhost:8080/swagger-ui/index.html
