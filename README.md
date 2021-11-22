@@ -5,7 +5,7 @@
 ```application.properties
 spring.jpa.hibernate.ddl-auto=none
 ```
-## TROCAR PARA:
+> TROCAR PARA:
 
 ```application.properties
 spring.jpa.hibernate.ddl-auto=create
@@ -28,7 +28,7 @@ java -jar sec-womap-0.0.1-SNAPSHOT.jar
 
 Com a aplicação funcionando, agora vem as requisições HTTP ao *WebService*. Elas podem ser feitas em aplicações como o **Postman** ou **Insomnia**, ou até diretamente na linha de comando pelo **_CURL_**, que serão apresentados a seguir:
 
-## Requisição de inserção de incidente pelo endereço
+##### Requisição de inserção de incidente pelo endereço
 ```curl
 curl --location --request POST 'http://localhost:8080/incident/address/2?description=Depois de uma confusão e briga, um homem me assediou' \
 --header 'Content-Type: application/json' \
@@ -41,7 +41,7 @@ curl --location --request POST 'http://localhost:8080/incident/address/2?descrip
 }'
 ```
 
-## Requisição de inserção de incidente pela geolocalização
+##### Requisição de inserção de incidente pela geolocalização
 ```curl
 curl --location --request POST 'http://localhost:8080/incident/location/2?description=Mandaram eu sentar em um banco na rua e fizeram eu ficar na roda dos homens sem que eu quisesse' \
 --header 'Content-Type: application/json' \
@@ -51,17 +51,37 @@ curl --location --request POST 'http://localhost:8080/incident/location/2?descri
 }'
 ```
 
-## Requisição de leitura de todos os incidentes
+##### Requisição de leitura de todos os incidentes
 ```curl
 curl --location --request GET 'http://localhost:8080/incident'
 ```
 
-## Requisição de leitura pelo endereço (neste exemplo todos com 'Brazil')
+##### Requisição de leitura pelo endereço (neste exemplo todos com 'Brazil')
 ```curl
 curl --location --request GET 'http://localhost:8080/incident/address?address=Brazil'
 ```
 
-## Requisição de leitura pela gravidade do incidente (neste exemplo 3 - Grave)
+##### Requisição de leitura pela gravidade do incidente (neste exemplo 3 - Grave)
 ```curl
 curl --location --request GET 'http://localhost:8080/incident/severity/3'
+```
+
+## Documentação visual da aplicação (Swagger UI)
+
+Caso a aplicação *SecWomap* seja rodada localmente, na própria máquina, a URL abaixo oferece a documentação visual da aplicação feita pelo *Swagger UI*:
+
+```swagger
+http://localhost:8080/swagger-ui/index.html
+```
+
+Caso a aplicação suba em algum serviço de nuvem ou com DNS, para inserir o caminho criado pelo serviço ou DNS com o final:
+
+```
+/swagger-ui/index.html
+```
+
+Qualquer dúvida ou erro encontrado, reportar ao GitHub abaixo:
+
+```
+https://github.com/aempinto02/secwomap
 ```
