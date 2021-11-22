@@ -26,7 +26,7 @@ java -jar sec-womap-0.0.1-SNAPSHOT.jar
 
 # Postman, CURL ou outra aplicação de requisição HTTP
 
-Com a aplicação funcionando, agora vem as requisições HTTP ao *WebService*. Elas podem ser feitas em aplicações como o **Postman** ou **Insomnia**, ou até diretamente na linha de comando pelo **_CURL_**, que serão apresentados a seguir:
+Com a aplicação funcionando, agora vem as requisições HTTP ao *WebService*. As requisições são feitas na *inserção* com **JSON** com os campos demonstrados a seguir e essas requisições podem ser feitas em aplicações como o **Postman** ou **Insomnia**, ou até diretamente na linha de comando pelo **_CURL_**, que serão apresentados a seguir:
 
 ##### Requisição de inserção de incidente pelo endereço
 ```curl
